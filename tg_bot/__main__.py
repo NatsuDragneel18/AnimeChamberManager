@@ -18,7 +18,7 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-TECHNO_IMG = "https://telegra.ph/file/97c38cbce98a8ecb7f539.jpg"
+
 
 Hey There, {}
 
@@ -54,6 +54,8 @@ Hello! my name *{}*.
 {}
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
+
+TECHNO_IMG = "https://telegra.ph/file/97c38cbce98a8ecb7f539.jpg"
 
 DONATE_STRING = """
 Hey, I Am Glad You Are Going To Donate My Owner.
@@ -153,7 +155,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN)
     else:
-        update.effective_message.reply_text("I Am Now Alive.")
+        update.effective_message.reply_text("Legends Don't Sleep!!.")
 
 
 # for test purposes
